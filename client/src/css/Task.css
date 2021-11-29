@@ -1,0 +1,52 @@
+.main .Header{
+    background-color: white;
+    height: 100px;
+    border-bottom: 2px solid black;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.main .Header .nav{
+    background-color: #438eb9;
+    height:45px;
+}
+.main .Header .content-header{
+    height: 55px;
+    text-align: center;
+    font-size: x-large;
+}
+.main .Body{
+    background-color:cornsilk;
+    display: flex;
+    margin-top: 100px;
+    min-height: 880px;
+}
+.main .Body .left{
+    width: 20%;
+    top:100px;
+    background-color: #F1F1F1;
+}
+.main .Body .left a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+}
+.main .Body .left div{
+    background-color: white;
+    border: 0.3px solid black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.main .Footer{
+    background-color: #438eb9;
+    text-align: center;
+}
+.main .Body .right{
+    background-color: cornsilk;
+    margin-top: 10px;
+    width: 80%;
+}

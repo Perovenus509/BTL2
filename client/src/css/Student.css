@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+}
+.form__container {
+  display: flex;
+  justify-content: space-around;
+}
+.form {
+  width: 40%;
+  padding: 10px;
+}
+caption {
+  text-align: left;
+}
+button {
+  height: 40px;
+}
+input {
+  height: 35px;
+  margin: 5px;
+}
+select {
+  height: 40px;
+  margin: 5px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+button:hover {
+  cursor: pointer;
+}

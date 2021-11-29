@@ -1,0 +1,15 @@
+.manager .header-manager  a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+.manager{
+    margin-bottom: 10px;
+}
+.manager .body-manager .row > *{
+    border: 1px solid;
+    text-align: center;
+    background-color: white;
+    padding-top: 0.5vmax;
+    padding-bottom: 0.5vmax;
+}

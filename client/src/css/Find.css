@@ -1,0 +1,31 @@
+.find{
+    background-color: white;
+    width: 80%;
+}
+.body-find{
+    margin-top: 10px;
+    width: 90%;
+    background-color: cornsilk;
+}
+.find .body-find .row > *{
+    border: 1px solid;
+    text-align: center;
+    background-color: white;
+}
+.find .header-find{
+    background-color: cornsilk;
+    margin-top: 10px;
+    width: 90%;
+}
+.find .header-find .row > *{
+    border: 1px solid;
+    text-align: center;
+    background-color: white;
+}
+.find .body-find h1{
+    min-height: 800px;
+    background-color: cornsilk;
+    text-align: center;
+    line-height: 400px;
+    margin: 0;
+}

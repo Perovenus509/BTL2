@@ -1,0 +1,13 @@
+.right{
+    background-color: cornsilk;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.right .row > *{
+    border: 1px solid;
+    text-align: center;
+    background-color: white;
+    padding-top: 0.5vmax;
+    padding-bottom: 0.5vmax;
+}
