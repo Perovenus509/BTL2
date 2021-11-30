@@ -9,7 +9,7 @@ export default function Config() {
 
     const [configList, setConfigList] = useState([])
     const [handler, sethandler] = useState(()=>{
-        var data = Axios.get("http://localhost:3000/config")
+        var data = Axios.get("http://localhost:3002/config")
         data.then((res)=>{
             setConfigList(res.data)
         })

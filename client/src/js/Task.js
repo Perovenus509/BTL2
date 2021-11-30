@@ -26,7 +26,7 @@ export default function Task() {
     const closemodal1 = ()=>{setShow1(false)}
     const handlerAdd = ()=>{
         console.log(id, name, dob, ssn, gender, uname, job) 
-        Axios.post("http://localhost:3000/insertemployee",
+        Axios.post("http://localhost:3002/insertemployee",
         {
             Staff_ID:id, 
             Full_name: name,
@@ -43,7 +43,7 @@ export default function Task() {
         closemodal1() 
     };
     const remove =(id)=>{
-        Axios.post("http://localhost:3000/deleteemployee",
+        Axios.post("http://localhost:3002/deleteemployee",
         {
             Staff_ID:id, 
         }).then((res)=>{
@@ -52,7 +52,7 @@ export default function Task() {
         })
     }
     const handlerUpdate = (id,name,dob,ssn,gender,uname)=>{
-        Axios.post("http://localhost:3000/updateemployee",
+        Axios.post("http://localhost:3002/updateemployee",
         {   
             Staff_ID: id,
             Full_name: name,
@@ -67,43 +67,43 @@ export default function Task() {
     const [cashierlist, SetCashierList] = useState([])
     const [managelist, SetManageList] = useState([])
     useEffect(() => {
-        var data = Axios.get("http://localhost:3000/employee")
+        var data = Axios.get("http://localhost:3002/employee")
         data.then((res)=>{
             SetEmpList(res.data)
         })
         //manage
-        data = Axios.get("http://localhost:3000/manage")
+        data = Axios.get("http://localhost:3002/manage")
         data.then((res)=>{
             SetManageList(res.data)
         })
         //securityguard
-        data = Axios.get("http://localhost:3000/securityguard")
+        data = Axios.get("http://localhost:3002/securityguard")
         data.then((res)=>{
             SetSecurityList(res.data)
          })
         //cashier
-        data = Axios.get("http://localhost:3000/cashier")
+        data = Axios.get("http://localhost:3002/cashier")
         data.then((res)=>{
             SetCashierList(res.data)
         })
     }, [])
     const reloadall = ()=>{
-        var data = Axios.get("http://localhost:3000/employee")
+        var data = Axios.get("http://localhost:3002/employee")
         data.then((res)=>{
             SetEmpList(res.data)
         })
         //manage
-        data = Axios.get("http://localhost:3000/manage")
+        data = Axios.get("http://localhost:3002/manage")
         data.then((res)=>{
             SetManageList(res.data)
         })
         //securityguard
-        data = Axios.get("http://localhost:3000/securityguard")
+        data = Axios.get("http://localhost:3002/securityguard")
         data.then((res)=>{
             SetSecurityList(res.data)
          })
         //cashier
-        data = Axios.get("http://localhost:3000/cashier")
+        data = Axios.get("http://localhost:3002/cashier")
         data.then((res)=>{
             SetCashierList(res.data)
         })

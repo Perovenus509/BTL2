@@ -8,7 +8,7 @@ import '../css/Hung.css';
 export default function BuildingConfig() {
     const [buildingConfigList, setBuildingConfigList] = useState([])
     const [handler, sethandler] = useState(()=>{
-        var data = Axios.get("http://localhost:3000/building_config")
+        var data = Axios.get("http://localhost:3002/building_config")
         data.then((res)=>{
             setBuildingConfigList(res.data)
         })
@@ -19,9 +19,9 @@ export default function BuildingConfig() {
         <Container>
           <Row>
             <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>Name</Col>
-            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>Latest W price index</Col>
-            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>Latest E price index</Col>
-            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>Last config date</Col>
+            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>W price index</Col>
+            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>E price index</Col>
+            <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>Config date</Col>
             <Col style={{backgroundColor:"#bdc3c7", fontWeight:"700"}}>BM_ID</Col>
           </Row>
           
@@ -29,8 +29,8 @@ export default function BuildingConfig() {
             <>
               <Row>
                 <Col>{buildingConfig.BName}</Col>
-                <Col>{buildingConfig.Latest_W_price_index}</Col>
-                <Col>{buildingConfig.Latest_E_price_index}</Col>
+                <Col>{buildingConfig.W_price_index}</Col>
+                <Col>{buildingConfig.E_price_index}</Col>
                 <Col>{Moment(buildingConfig.Last_config_date).format("YYYY-MM-DD")}</Col>
                 <Col>{buildingConfig.BM_ID}</Col>
               </Row>

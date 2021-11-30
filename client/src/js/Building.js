@@ -10,7 +10,7 @@ export default function Building({remove,update}) {
     const [managelist, SetManageList] = useState([])
     const [handler, Sethandler] = useState(()=>{
        
-        var data = Axios.get("http://localhost:3000/managetime")
+        var data = Axios.get("http://localhost:3002/managetime")
         data.then((res)=>{
             SetManageList(res.data)
         })

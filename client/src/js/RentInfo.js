@@ -8,7 +8,7 @@ import '../css/Hung.css';
 export default function RentInfo({rentInfoList}) {
     
   const deleteRow = (rentInfo) => {
-    Axios.post('http://localhost:3000/api/delete_from_rent_info', {
+    Axios.post('http://localhost:3002/api/delete_from_rent_info', {
       R_StudentID: rentInfo.R_StudentID,
       R_BName: rentInfo.R_BName,
       R_Room_ID: rentInfo.R_Room_ID,

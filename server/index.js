@@ -13,8 +13,8 @@ const db = mysql.createConnection({
 app.use(cors());
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}));
-app.listen(3000,()=>{
-  console.log("running port 3000")
+app.listen(3002,()=>{
+  console.log("running port 3002")
 })
 app.get('/employee',(req, res)=>{
     db.query("SELECT * FROM employee;",(err, results)=>{
@@ -320,7 +320,7 @@ app.get("/building", (req, res) => {
 // hết phần của nghĩa
 //Phần của Hưng
 app.get('/building_config',(req, res)=>{
-  const selectQuery = "SELECT BName,Latest_W_price_index,Latest_E_price_index,Last_config_date,BM_ID "
+  const selectQuery = "SELECT BName,W_price_index,E_price_index,Last_config_date,BM_ID "
   const fromQuery1 = "FROM building,config WHERE Name = BName AND W_price_index = Latest_W_price_index "
   const fromQuery2 = "AND E_price_index = Latest_E_price_index ORDER BY BName;"
   const sqlStatement = selectQuery + fromQuery1 + fromQuery2;

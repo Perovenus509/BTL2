@@ -35,7 +35,7 @@ function Student() {
   const [inputID, setInputID] = useState("");
 
   const updateStudent = () => {
-    Axios.put("http://localhost:3000/updatestudent", {
+    Axios.put("http://localhost:3002/updatestudent", {
       id: uID,
       fullname: uname,
       ssn: ussn,
@@ -52,7 +52,7 @@ function Student() {
   };
 
   const updateRent = () => {
-    Axios.post("http://localhost:3000/updaterentinfo", {
+    Axios.post("http://localhost:3002/updaterentinfo", {
       studentID: uID,
       BName: ubuilding,
       RoomID: uroom,
@@ -63,13 +63,13 @@ function Student() {
   };
 
   const deleteStudent = (id) => {
-    Axios.delete(`http://localhost:3000/deletestudent/${id}`).then(() => {
+    Axios.delete(`http://localhost:3002/deletestudent/${id}`).then(() => {
       getStudent();
     });
   };
 
   const getRoom = () => {
-    Axios.post("http://localhost:3000/room", {
+    Axios.post("http://localhost:3002/room", {
       building: selectedBuilding,
     }).then((response) => {
       setRoomList(response.data);
@@ -77,7 +77,7 @@ function Student() {
   };
 
   const getSearchedStudent = () => {
-    Axios.post("http://localhost:3000/searchstudent", {
+    Axios.post("http://localhost:3002/searchstudent", {
       id: inputID,
     }).then((response) => {
       setSearchedStudent(response.data);
@@ -85,25 +85,25 @@ function Student() {
   };
 
   const getBuilding = () => {
-    Axios.get("http://localhost:3000/building").then((response) => {
+    Axios.get("http://localhost:3002/building").then((response) => {
       setBuildingList(response.data);
     });
   };
 
   const getStudent = () => {
-    Axios.get("http://localhost:3000/students").then((response) => {
+    Axios.get("http://localhost:3002/students").then((response) => {
       setStudentList(response.data);
     });
   };
 
   const getAllStudent = () => {
-    Axios.get("http://localhost:3000/allstudents").then((response) => {
+    Axios.get("http://localhost:3002/allstudents").then((response) => {
       setStudentList(response.data);
     });
   };
 
   const addStudent = () => {
-    Axios.post("http://localhost:3000/addroom", {
+    Axios.post("http://localhost:3002/addroom", {
       id: ID,
       fullname: name,
       ssn: ssn,

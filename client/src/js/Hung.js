@@ -24,7 +24,7 @@ function Hung() {
   const [searchKey, setSearchKey] = useState('');
 
   const insertConfig = () => {
-    Axios.post('http://localhost:3000/api/insert_on_config', {
+    Axios.post('http://localhost:3002/api/insert_on_config', {
       BM_ID: BM_ID,
       BName: bName,
       Last_config_date: lastConfigDate,
@@ -36,7 +36,7 @@ function Hung() {
   }
 
   const searchRentInfo = () => {
-    Axios.post('http://localhost:3000/api/search_in_rent_info', {
+    Axios.post('http://localhost:3002/api/search_in_rent_info', {
       searchKey: searchKey
     }).then((res) =>{
       if(!res.data) {
@@ -48,7 +48,7 @@ function Hung() {
 
   const [rentInfoList, setRentInfoList] = useState([])
   const [handlerRent, sethandlerRent] = useState(()=>{
-      var data = Axios.get("http://localhost:3000/rent_info")
+      var data = Axios.get("http://localhost:3002/rent_info")
       data.then((res)=>{
           setRentInfoList(res.data)
       })

@@ -8,7 +8,7 @@ import UpdateModal from './UpdateModal';
 export default function Room() {
     const [roomList, setRoomList] = useState([])
     const [handler, sethandler] = useState(()=>{
-        var data = Axios.get("http://localhost:3000/room1")
+        var data = Axios.get("http://localhost:3002/room1")
         data.then((res)=>{
             setRoomList(res.data)
         })

@@ -28,7 +28,7 @@ export default function Find({remove,update}) {
     const closemodal2 = ()=>{setShow(false)}
     const  [findlist,Setfind] = useState([])
     const handlerFind =()=>{
-        Axios.post("http://localhost:3000/findemployee",
+        Axios.post("http://localhost:3002/findemployee",
         {
             Staff_ID:id, 
             Full_name: name,
@@ -38,7 +38,7 @@ export default function Find({remove,update}) {
     
     };
     const handlerSecurity =()=>{
-        Axios.post("http://localhost:3000/findsecurity",
+        Axios.post("http://localhost:3002/findsecurity",
         {
             Bname: bname,
             day: ngay,
