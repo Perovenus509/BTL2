@@ -320,10 +320,9 @@ app.get("/building", (req, res) => {
 // hết phần của nghĩa
 //Phần của Hưng
 app.get('/building_config',(req, res)=>{
-  const selectQuery = "SELECT BName,W_price_index,E_price_index,Last_config_date,BM_ID "
-  const fromQuery1 = "FROM building,config WHERE Name = BName AND W_price_index = Latest_W_price_index "
-  const fromQuery2 = "AND E_price_index = Latest_E_price_index ORDER BY BName;"
-  const sqlStatement = selectQuery + fromQuery1 + fromQuery2;
+  const selectQuery = "SELECT BName,W_price_index,E_price_index,max(Last_config_date) AS Config_date,BM_ID "
+  const fromQuery1 = "FROM building,config WHERE Name = BName GROUP BY BName ORDER BY BName;"
+  const sqlStatement = selectQuery + fromQuery1;
   db.query(sqlStatement, (err, results)=>{
       if (err) console.log(err);
       else res.json(results);

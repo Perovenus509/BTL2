@@ -31,7 +31,7 @@ export default function BuildingConfig() {
                 <Col>{buildingConfig.BName}</Col>
                 <Col>{buildingConfig.W_price_index}</Col>
                 <Col>{buildingConfig.E_price_index}</Col>
-                <Col>{Moment(buildingConfig.Last_config_date).format("YYYY-MM-DD")}</Col>
+                <Col>{Moment(buildingConfig.Config_date).format("YYYY-MM-DD")}</Col>
                 <Col>{buildingConfig.BM_ID}</Col>
               </Row>
             </>
